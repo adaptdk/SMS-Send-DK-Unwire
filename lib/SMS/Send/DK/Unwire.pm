@@ -120,7 +120,7 @@ sub send_sms {
 	$form{sessionid} ||= $self->_sessionid( $form{to} );
 
 	my $ua= $self->{ua};
-	my $response= $ua->post( "https://gw.unwire.com/service/smspush", \%form );
+	my $response= $ua->post( "https://messaging.unwire.com/smspush", \%form );
 	croak "HTTP (https) request failed (".$response->status_line.")" unless $response->is_success;
 
 	my $content= $response->content;
