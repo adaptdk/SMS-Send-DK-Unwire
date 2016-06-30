@@ -1,28 +1,38 @@
 {
-   "abstract" : "An SMS::Send driver for Unwire",
-   "author" : [
-      "Olav Cleemann <olav@adapt.dk>"
-   ],
-   "dynamic_config" : 0,
-   "generated_by" : "ExtUtils::MakeMaker version 6.72, CPAN::Meta::Converter version 2.141170",
-   "license" : [
-      "artistic_2"
-   ],
-   "meta-spec" : {
-      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
-      "version" : "2"
-   },
-   "name" : "SMS-Send-DK-Unwire",
    "no_index" : {
       "directory" : [
          "t",
          "inc"
       ]
    },
+   "release_status" : "stable",
+   "generated_by" : "ExtUtils::MakeMaker version 6.72, CPAN::Meta::Converter version 2.141170",
+   "meta-spec" : {
+      "version" : "2",
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec"
+   },
+   "license" : [
+      "artistic_2"
+   ],
+   "name" : "SMS-Send-DK-Unwire",
+   "dynamic_config" : 0,
+   "provides" : {
+      "SMS::Send::DK::Test" : {
+         "file" : "lib/SMS/Send/DK/Test.pm",
+         "version" : "0.04"
+      },
+      "SMS::Send::DK::Unwire" : {
+         "version" : "0.01",
+         "file" : "lib/SMS/Send/DK/Unwire.pm"
+      }
+   },
+   "author" : [
+      "Olav Cleemann <olav@adapt.dk>"
+   ],
    "prereqs" : {
-      "build" : {
+      "runtime" : {
          "requires" : {
-            "Test::More" : "0"
+            "perl" : "5.006"
          }
       },
       "configure" : {
@@ -30,12 +40,12 @@
             "ExtUtils::MakeMaker" : "0"
          }
       },
-      "runtime" : {
+      "build" : {
          "requires" : {
-            "perl" : "5.006"
+            "Test::More" : "0"
          }
       }
    },
-   "release_status" : "stable",
+   "abstract" : "An SMS::Send driver for Unwire",
    "version" : "0.01"
 }
